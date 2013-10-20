@@ -26,8 +26,8 @@ public class App
     	FileInputFormat.addInputPath(job,new Path(args[0]) );
     	FileOutputFormat.setOutputPath(job, new Path(args[1]));
     	
-    	job.setMapperClass(CiteMapper.class);
-    	job.setReducerClass(CiteReducer.class);
+    	job.setMapperClass(PatentMapper.class);
+    	job.setReducerClass(PatentReducer.class);
     	
     	job.setInputFormatClass(KeyValueTextInputFormat.class);
     	job.setOutputFormatClass(TextOutputFormat.class);
